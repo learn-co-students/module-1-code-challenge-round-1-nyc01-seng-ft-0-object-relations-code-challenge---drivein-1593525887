@@ -29,6 +29,16 @@ class MovieScreen
     viewers
   end
 
+  def self.at_capacity?
+
+  end
+
+  def self.available_spots
+  end
+
+  def add_car(car)
+  end
+
 
   def self.all_screens
     @@all

@@ -25,9 +25,8 @@ class DriveIn
   end
 
   def full_house?
-    total_viewers = 0
+    total_viewers = screens.map
     capacity = 0
-    
   end
 
   def all
