@@ -24,10 +24,10 @@ class DriveIn
     movies_names
   end
 
-  def full_house?
-    if MovieScreen.
-
-    end
-  end
+  # def full_house?
+  #   if MovieScreen.
+  #
+  #   end
+  # end
 
 end

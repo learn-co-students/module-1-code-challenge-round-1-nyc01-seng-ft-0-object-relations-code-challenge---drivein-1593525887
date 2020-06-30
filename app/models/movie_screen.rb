@@ -34,7 +34,7 @@ class MovieScreen
       return false
     end
   end
-
+#need to refactor
   def available_spots
     10 - number_of_viewers
   end
