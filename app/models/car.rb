@@ -17,9 +17,8 @@ class Car
     @@all
   end
 
-def passenger_count
-  @passenger_count
-  self.all.size
+def passenger_count #This will give a total of all car passengers
+  self.all.sum
 end
 
 
