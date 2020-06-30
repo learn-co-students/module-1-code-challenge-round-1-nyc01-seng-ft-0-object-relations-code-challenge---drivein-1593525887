@@ -62,7 +62,7 @@ Some of the methods listed are provided to you in the starter code. You should c
 - `MovieScreen#capacity`
   - should return the `MovieScreen`'s capacity
 - `MovieScreen#drive_in`
-  - should return the `DriveIn` associated with this `MovieScreen`
+  - should return the `DriveIn` associated with this `MovieScreen` (DANIEL: test for this one!)
 - `MovieScreen.all_screens`
   - Returns an array of all movie screens that have been created.
 
