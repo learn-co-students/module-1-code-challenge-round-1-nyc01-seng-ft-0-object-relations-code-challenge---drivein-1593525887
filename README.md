@@ -49,7 +49,7 @@ Some of the methods listed are provided to you in the starter code. You should c
 - `DriveIn#initialize(name)`
   - A drive-in should be initialized with a `name` as a string.
   - The name **cannot** be changed after the drive-in is initialized.
-- `DriveIn#name`
+- `DriveIn#name`current_movie_screen
   - should return the name of the `DriveIn`
 
 #### MovieScreen
@@ -80,7 +80,7 @@ Some of the methods listed are provided to you in the starter code. You should c
 
 #### Car
 
-- `Car#current_movie_screen`
+- `Car#`
   - Returns the current movie screen that a particular car is associated with.
 - `Car#current_movie_screen=`
   - Assigns a movie screen object to a particular car to indicate which movie screen that car is currently at.
