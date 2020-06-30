@@ -16,6 +16,7 @@ c4 = Car.new(1)
 megabus = Car.new(200)
 m1 = MovieScreen.new("Spy Kids 7", 10, d1)
 m2 = MovieScreen.new("Some Marvel Movie", 100, d1)
+m3 = MovieScreen.new("Some Oscar Biopic", 5, d2)
 c1.current_movie_screen = m1
 c2.current_movie_screen = m1
 #c3.current_movie_screen = m1

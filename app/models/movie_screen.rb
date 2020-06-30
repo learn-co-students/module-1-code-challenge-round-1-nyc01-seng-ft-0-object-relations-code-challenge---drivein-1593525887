@@ -22,9 +22,8 @@ class MovieScreen
   end
 
   def at_capacity?
-    current_capacity = self.number_of_viewers
-    puts "#{current_capacity}/#{capacity}"
-    current_capacity >= capacity
+    #puts "#{movie_title} at #{number_of_viewers}/#{capacity} capacity"
+    number_of_viewers >= capacity
   end
 
   def available_spots
@@ -34,6 +33,17 @@ class MovieScreen
   def add_car(car_object)
     if at_capacity?
       "Sold Out!"
+    else
+      car_object.current_movie_screen = self
+      "Enjoy!"
+    end
+  end
+
+  def add_car_realistic(car_object)
+    if at_capacity?
+      "Sold Out!"
+    elsif (car_object.passenger_count + number_of_viewers) > capacity
+      "We're sorry. There's not enough tickets left for all of you. Perhaps you should kick out some passengers and try again."
     else
       car_object.current_movie_screen = self
       "Enjoy!"
