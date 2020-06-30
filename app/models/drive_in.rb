@@ -5,7 +5,7 @@ class DriveIn
     @@all = []
 
     def initialize(name)
-        # name as string for DriveIn
+        # name as string
         @name = name
         DriveIn.all << self
     end

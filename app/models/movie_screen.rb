@@ -1,6 +1,6 @@
 class MovieScreen
 
-    attr_reader :capacity, :movie_title, :drive_in, :lot #:passenger_count
+    attr_reader :capacity, :movie_title, :drive_in, :lot
 
     @@all = []
 
@@ -9,7 +9,7 @@ class MovieScreen
       @capacity = capacity
       @drive_in = drive_in
       @lot = []
-      #save
+      #?save
       MovieScreen.all_screens << self
     end
 
@@ -24,7 +24,7 @@ class MovieScreen
 
     def number_of_viewers
       # need to iterate through array first; ##NOTE TO SELF - dig into how reduce works mechanically later
-      cars.reduce.sum {|x| x.passenger_count }
+      cars.reduce.sum {|screen_inst| screen_inst.passenger_count }
     end
 
     def at_capacity?

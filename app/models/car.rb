@@ -1,7 +1,7 @@
 class Car
 
-    attr_accessor :passenger_count#, :current_movie_screen
-    attr_reader :current_movie_screen
+    attr_accessor :passenger_count
+    #attr_reader :current_movie_screen
 
     @@all = []
 
@@ -16,6 +16,11 @@ class Car
 
     def current_movie_screen=(current_movie_screen)
       current_movie_screen.add_car = self
+    end
+
+    def current_movie_screen
+      MovieScreen.all_screens.each {|screen_inst| screen_inst.lot}#.map {|x| x if x == self}
+         #if screen_inst.lot.select {|car| car == self}
     end
 
 end
