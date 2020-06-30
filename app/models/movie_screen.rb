@@ -36,11 +36,17 @@ class MovieScreen
   end
 
   def available_spots
-
+    10 - number_of_viewers
   end
 
-  def add_car(car)
 
+  def add_car(car)
+    if car.passenger_count >= available_spots
+       return "Sold out!"
+     else
+       ScreenCar.new(self, car)
+       "Enjoy"
+     end
   end
 
 end

@@ -25,7 +25,9 @@ class DriveIn
   end
 
   def full_house?
+    if MovieScreen.
 
+    end
   end
 
 end
