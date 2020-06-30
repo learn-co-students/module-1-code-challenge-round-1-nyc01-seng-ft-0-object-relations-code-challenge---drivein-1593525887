@@ -12,7 +12,7 @@ class DriveIn
         end
     end
 
-    #this is a helper method used b following methods
+    #this is a helper method used by the following methods
     def movie_screens
         MovieScreen.all.select do |element|
             element.drive_in == self

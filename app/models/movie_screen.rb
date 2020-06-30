@@ -13,7 +13,7 @@ class MovieScreen
     @@all
   end
 
-  #This is redundant with MovieScreen.all, but I didn't realize the instructions asked for a method with this title till the very end.
+  #This is redundant with MovieScreen.all, but I didn't realize the instructions asked for a method with this title over .all till the very end.
   #My bad!
   def self.all_screens
     @@all
