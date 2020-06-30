@@ -1,6 +1,6 @@
 # Object Relations Code Challenge - DriveIn
 
-For this challenge, we will be working with a drive-in movie domain.
+
 
 We have three models: `DriveIn`, `MovieScreen`, and `Car`.
 
