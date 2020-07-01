@@ -14,11 +14,6 @@ require_relative '../app/models/drive_in'
 
 ### WRITE YOUR TEST CODE HERE ###
 
-car1 = Car.new(3)
-car2 = Car.new(3)
-car3 = Car.new(1)
-car4 = Car.new(4)
-
 drive_in1 = DriveIn.new("DriveIn1")
 drive_in2 = DriveIn.new("DriveIn2")
 drive_in3 = DriveIn.new("DriveIn3")
@@ -31,6 +26,10 @@ movie_screen4 = MovieScreen.new("Movie 4", 60, drive_in4)
 movie_screen5 = MovieScreen.new("Movie 5", 45, drive_in1)
 movie_screen6 = MovieScreen.new("Movie 6", 35, drive_in2)
 
+car1 = Car.new(3, movie_screen1)
+car2 = Car.new(3, movie_screen2)
+car3 = Car.new(1, movie_screen4)
+car4 = Car.new(4, movie_screen5)
 
 
 
