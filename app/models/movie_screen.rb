@@ -33,21 +33,25 @@ class MovieScreen
     end
   end
 
-#need to refactor. want to set up a condition where it cannot be a negative number
+
+
   def available_spots
-    if self.capacity < number_of_viewers
-      self.at_capacity - number_of_viewers
+    if self.capacity == number_of_viewers
+      0
+    elsif
+      self.capacity < number_of_viewers
+      0
     else
-      return "At Capacity"
+      self.capacity - number_of_viewers
     end
   end
 
-#need to refactor
+# need to refactor
   # def add_car(car)
   #   if car.passenger_count >= available_spots
   #      return "Sold out!"
   #    else
-  #      ScreenCar.new(self, car)
+  #      Car.new(self, car)
   #      "Enjoy"
   #    end
   # end
