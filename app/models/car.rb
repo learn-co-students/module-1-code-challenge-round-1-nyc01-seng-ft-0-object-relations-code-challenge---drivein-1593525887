@@ -1,7 +1,8 @@
 class Car
-  attr_accessor :passenger_count
+  attr_accessor :passenger_count, :movie_screen
   @@all = []
-  def initialize(passenger_count)
+  def initialize(passenger_count, movie_screen=nil)
+    @movie_screen = movie_screen
     @passenger_count = passenger_count
     @@all << self
   end
@@ -10,12 +11,12 @@ class Car
   end
 
   def current_movie_screen
-    MovieScreen.all.select do |car_instance|
-      car_instance.car == self
-    end
+    @movie_screen
   end
 
-  def current_movie_screen=(car)
-    @car = car
+  def current_movie_screen=(ms)
+    @movie_screen = ms
   end
+
+
 end

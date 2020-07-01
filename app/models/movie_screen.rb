@@ -13,11 +13,9 @@ class MovieScreen
   end
 
   def cars
-    cars_array = []
-    ScreenCar.all.each do |cars|
-      cars_array << cars.car
-    end
-    cars_array
+      Car.all.select do |ms_instance|
+        ms_instance.movie_screen == self
+      end
   end
 
 
@@ -28,25 +26,30 @@ class MovieScreen
   end
 
   def at_capacity?
-    if number_of_viewers >= 10
+    if number_of_viewers >= self.capacity
       return true
     else
       return false
     end
   end
-#need to refactor
+
+#need to refactor. want to set up a condition where it cannot be a negative number
   def available_spots
-    10 - number_of_viewers
+    if self.capacity < number_of_viewers
+      self.at_capacity - number_of_viewers
+    else
+      return "At Capacity"
+    end
   end
 
-
-  def add_car(car)
-    if car.passenger_count >= available_spots
-       return "Sold out!"
-     else
-       ScreenCar.new(self, car)
-       "Enjoy"
-     end
-  end
+#need to refactor
+  # def add_car(car)
+  #   if car.passenger_count >= available_spots
+  #      return "Sold out!"
+  #    else
+  #      ScreenCar.new(self, car)
+  #      "Enjoy"
+  #    end
+  # end
 
 end
