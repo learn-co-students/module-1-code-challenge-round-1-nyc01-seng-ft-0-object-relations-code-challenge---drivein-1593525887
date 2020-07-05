@@ -1,3 +1,4 @@
+# Revision: Correcting error with my relationship model
 class DriveIn
 
     attr_reader :name
@@ -5,9 +6,9 @@ class DriveIn
     @@all = []
 
     def initialize(name)
-        # name as string
+        # Note: name is a string of DriveIn establishment
         @name = name
-        DriveIn.all << self
+        self.class.all << self
     end
 
     def self.all
@@ -23,9 +24,7 @@ class DriveIn
     end
 
     def full_house?
-        screens.all? do |screen_inst|
-            screen_inst.at_capacity? == true
-        end
+        screens.all? { |screen_inst| screen_inst.at_capacity? }
     end
 
 end

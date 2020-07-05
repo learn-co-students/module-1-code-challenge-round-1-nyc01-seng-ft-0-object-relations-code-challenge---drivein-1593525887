@@ -1,26 +1,17 @@
+# Revision: Correcting error with my relationship model
 class Car
 
-    attr_accessor :passenger_count
-    #attr_reader :current_movie_screen
+    attr_accessor :passenger_count, :current_movie_screen
 
     @@all = []
 
     def initialize(passenger_count)
-      @passenger_count = passenger_count
-      Car.all << self
+        @passenger_count = passenger_count
+        self.class.all << self
     end
 
     def self.all
-      @@all
-    end
-
-    def current_movie_screen=(current_movie_screen)
-      current_movie_screen.add_car = self
-    end
-
-    def current_movie_screen
-      MovieScreen.all_screens.each {|screen_inst| screen_inst.lot}#.map {|x| x if x == self}
-         #if screen_inst.lot.select {|car| car == self}
+        @@all
     end
 
 end
